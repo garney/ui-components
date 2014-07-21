@@ -7,7 +7,7 @@ angular.module('uiComponents').directive('uiAlert', function() {
       class: '@',
       strong: '@'
     },
-    templateUrl: 'ui-alert.html'
+    templateUrl: '/ui-components/ui-alert.html'
   };
 });
 
@@ -27,7 +27,7 @@ angular.module('uiComponents').directive('uiCpf', function() {
           $scope.value = (data || '').replace(/[^0-9]/g, '').replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
       });
     },
-    templateUrl: 'ui-input.html'
+    templateUrl: '/ui-components/ui-input.html'
   };
 });
 
@@ -49,12 +49,11 @@ angular.module('uiComponents').directive('uiKnob', function() {
       });
 
       $scope.$watch('value', function(value) {
-        debugger;
         var el = $($element).find('.knob');
         el.val(value).trigger('change');
       });
     },
-    templateUrl: 'ui-knob.html'
+    templateUrl: '/ui-components/ui-knob.html'
   };
 });
 
@@ -78,7 +77,7 @@ angular.module('uiComponents').directive('uiKnobPercentage', function() {
         });
       });
     },
-    templateUrl: 'ui-knob.html'
+    templateUrl: '/ui-components/ui-knob.html'
   };
 });
 
@@ -124,13 +123,13 @@ angular.module('uiComponents').directive('uiSpark', function() {
       $scope.$watch('bind', function(data) {
           $timeout(function() {
             $scope.$apply(function(){
-              debugger;
+              
               $scope.sparkline(data);
             })
           }, 500);
       });
     },
-    templateUrl: 'ui-spark.html'
+    templateUrl: '/ui-components/ui-spark.html'
   };
 });
 
@@ -161,7 +160,7 @@ angular.module('uiComponents').directive('uiTable', function() {
         $scope.sortBy = sortBy;
       };
     },
-    templateUrl: 'ui-table.html'
+    templateUrl: '/ui-components/ui-table.html'
   };
 });
 

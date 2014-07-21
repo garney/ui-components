@@ -45,9 +45,7 @@ div.dash-panel.aqua {
 
 div.dash-panel .sparkline {
   position: absolute;
-  float: left;
-  bottom: 0;
-  z-index: 0; }
+  float: left; }
 
 .nav li {
   border-left: 2px solid transparent; }

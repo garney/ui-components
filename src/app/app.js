@@ -34,7 +34,7 @@ angular.module('uiComponents', [
 
     $scope.data = [10, 8, 4, 3, 5, 6, 3.99];
 
-    $scope.setView('input.html');
+//    $scope.setView('input.html');
 
     $scope.addToMyData = function(item) {
         $scope.data.push(item);

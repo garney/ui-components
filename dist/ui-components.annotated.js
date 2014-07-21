@@ -195,7 +195,7 @@ angular.module('uiComponents', [
       6,
       3.99
     ];
-    $scope.setView('input.html');
+    //    $scope.setView('input.html');
     $scope.addToMyData = function (item) {
       $scope.data.push(item);
       $scope.$apply();
@@ -236,7 +236,7 @@ angular.module('uiComponents').directive('uiAlert', function () {
       class: '@',
       strong: '@'
     },
-    templateUrl: 'ui-alert.html'
+    templateUrl: '/ui-components/ui-alert.html'
   };
 });
 angular.module('uiComponents').directive('uiCpf', function () {
@@ -257,7 +257,7 @@ angular.module('uiComponents').directive('uiCpf', function () {
         });
       }
     ],
-    templateUrl: 'ui-input.html'
+    templateUrl: '/ui-components/ui-input.html'
   };
 });
 angular.module('uiComponents').directive('uiKnob', function () {
@@ -279,13 +279,12 @@ angular.module('uiComponents').directive('uiKnob', function () {
           $('#' + $scope.id).find('.knob').knob();
         });
         $scope.$watch('value', function (value) {
-          debugger;
           var el = $($element).find('.knob');
           el.val(value).trigger('change');
         });
       }
     ],
-    templateUrl: 'ui-knob.html'
+    templateUrl: '/ui-components/ui-knob.html'
   };
 });
 angular.module('uiComponents').directive('uiKnobPercentage', function () {
@@ -311,7 +310,7 @@ angular.module('uiComponents').directive('uiKnobPercentage', function () {
         });
       }
     ],
-    templateUrl: 'ui-knob.html'
+    templateUrl: '/ui-components/ui-knob.html'
   };
 });
 angular.module('uiComponents').directive('uiSpark', function () {
@@ -353,14 +352,13 @@ angular.module('uiComponents').directive('uiSpark', function () {
         $scope.$watch('bind', function (data) {
           $timeout(function () {
             $scope.$apply(function () {
-              debugger;
               $scope.sparkline(data);
             });
           }, 500);
         });
       }
     ],
-    templateUrl: 'ui-spark.html'
+    templateUrl: '/ui-components/ui-spark.html'
   };
 });
 angular.module('uiComponents').directive('uiTable', function () {
@@ -397,7 +395,7 @@ angular.module('uiComponents').directive('uiTable', function () {
         };
       }
     ],
-    templateUrl: 'ui-table.html'
+    templateUrl: '/ui-components/ui-table.html'
   };
 });
 angular.module('uiComponents').filter('paginator', function () {
