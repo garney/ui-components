@@ -1,0 +1,14 @@
+.nav li {
+  border-left: 2px solid transparent;
+}
+.nav li.active {
+  border-left: 2px solid #428bca;
+}
+.pagination {
+  margin: 0px;
+  cursor: pointer;
+}
+
+.font-invisible {
+  color: transparent;
+}

@@ -1,0 +1,75 @@
+body {
+  padding: 50px;
+  font: 20px/150% "Helvetica Neue", "Lucida Grande", Verdana, sans-serif;
+  color: #666;
+  background: #fcfcfc;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+div.dash-panel {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  border: 1px solid transparent;
+}
+div.dash-panel .title {
+  z-index: 100;
+  position: relative;
+  padding: 3px 10px 0px 10px;
+  margin-left: 25%;
+  font-size: 16px;
+}
+div.dash-panel .title span {} div.dash-panel .value {
+                                display: inline-block;
+                                position: relative;
+                                z-index: 100;
+                                font-size: 60px;
+                                width: 100%;
+                                padding: 0px 10px;
+                              }
+div.dash-panel.green {
+  background-color: #5BB75B;
+  color: #fff;
+}
+
+div.dash-panel.red {
+  background-color: #DA4F49;
+  color: #fff;
+}
+
+
+div.dash-panel.aqua {
+  background-color: #13A89E;
+  color: #fff;
+}
+
+
+div.dash-panel .sparkline {
+  position: absolute;
+  float: left;
+  bottom: 0;
+  z-index: 0;
+}
+
+.nav li {
+  border-left: 2px solid transparent;
+}
+.nav li.active {
+  border-left: 2px solid #428bca;
+}
+.pagination {
+  margin: 0px;
+  cursor: pointer;
+}
+
+.font-invisible {
+  color: transparent;
+}

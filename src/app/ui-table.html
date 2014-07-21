@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+  <div class="panel-heading" data-ng-transclude>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped table-hover">
+      <colgroup>
+        <col class="{{width}}" data-ng-repeat="width in width" />
+      </colgroup>
+      <thead>
+        
+        <th data-ng-repeat="c in cols" style="cursor: pointer">
+          <div data-ng-click="setSortBy(vals[$index])">
+            <span data-ng-bind="c"></span>
+            <span style="float: right;" data-ng-class="{'glyphicon glyphicon-chevron-up': !$parent.asc, 'glyphicon glyphicon-chevron-down': $parent.asc, 'font-invisible' : $parent.sortBy != vals[$index]}" ></span>
+          </div>
+          
+        </th>
+        
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="d in (data|filter:filter|orderBy:sortBy:asc|paginator:pagCount)[pagIndex]">
+          <td data-ng-repeat="v in vals" data-ng-bind="d[v]"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel-footer">
+    <div class="row">
+      <div class="col-md-12">
+
+        <ul class="pagination center">
+          <li>
+            <a ng-click="pagIndex = 0">&laquo;</a> {{$first}}
+          </li>
+          <li ng-repeat="d in (data|filter:filter|orderBy:sortBy:asc|paginator:pagCount)" ng-class="{active: pagIndex == $index}">
+            <a ng-click="$parent.pagIndex = $index">{{$index + 1}}</a> 
+          </li>
+          <li>
+            <a ng-click="pagIndex = ((data|filter:filter|orderBy:sortBy:asc|paginator:pagCount).length - 1)">&raquo;</a> {{$last}}
+          </li>
+        </ul>
+
+        <select class="form-control" data-ng-model="pagCount" data-ng-options="c for c in maxOfPage " style="width: 80px; float: right;">
+        </select>
+      </div>
+    </div>
+
+  </div>
+</div>

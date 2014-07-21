@@ -1,0 +1,41 @@
+<h3>Todo</h3>
+<ul class="todo-list">
+  <li class="todo-item" ng-repeat="todo in todos" ng-class="{'todo-done': todo.isDone}">
+    <label><input type="checkbox" ng-click="check()" ng-model="todo.isDone"/>&nbsp;{{todo.label}}</label>
+  </li>
+  <li class="todo-item">
+    <form ng-submit="add()">
+      <input type="text" placeholder="New item..." ng-model="label"/>
+      <button type="submit" ng-disabled="posting || !label">Add</button>
+    </form>
+  </li>
+</ul>
+<div class="row">
+    <div class="col-md-12">
+        <data-ui-input label="Valor do knob" value="knob" type="number" placeholder="Informe o valor"></data-ui-input>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <data-ui-knob id="knob" data-value="knob" data-min="30" data-max="300" readonly=true></data-ui-knob>
+    </div>
+    <div class="col-md-6">
+        <data-ui-knob-percentage id="percentage" data-value="knob" data-min="30" data-max="300" readonly=true></data-ui-knob-percentage>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Menu lateral -->
+        <div class="col-md-2" ng-include="'menu.html'"></div>
+        <div class="col-md-10" ng-include="view"></div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+{
+  "name": "ui-components",
+  "main": [
+    "/dist/ui-components.min.js",
+    "/dist/ui-components.min.css"
+  ],
+  "version": "0.1.0",
+  "description": "TODO",
+  "authors": [
+    "TODO"
+  ],
+  "ignore": [
+    "**/.*",
+    "package.json",
+    "klei.json",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components",
+    "src"
+  ],
+  "dependencies": {
+    "angular": "~1.2.14",
+    "angular-route": "~1.2.14",
+      "bootstrap": "~3.2.0",
+      "angular-ui-bootstrap-bower": "~0.11.0",
+    "jquery-knob": "~1.2.9"
+
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.14"
+  }
+}
